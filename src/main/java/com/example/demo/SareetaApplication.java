@@ -19,6 +19,7 @@ public class SareetaApplication {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("Starting application");
 		SpringApplication.run(SareetaApplication.class, args);
 	}
 }

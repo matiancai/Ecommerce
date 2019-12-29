@@ -21,8 +21,6 @@ import java.util.Date;
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 import static com.example.demo.security.SecurityConstants.*;
 
-//import com.google.gson.Gson;
-
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;
 
@@ -36,8 +34,6 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         try {
             AppUser credentials = new ObjectMapper()
                     .readValue(req.getInputStream(), AppUser.class);
-           /* Gson gson = new Gson();
-            AppUser credentials = gson.fromJson(req.getInputStream().read(), AppUser::class.java);*/
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
