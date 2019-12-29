@@ -27,15 +27,6 @@ public class AppUser {
 	@JsonIgnore
     private Cart cart;
 
-	public AppUser() {
-	}
-
-	/*public AppUser(String username, String password, Cart cart){
-		this.setUsername(username);
-		this.setPassword(password);
-		this.setCart(cart);
-	}*/
-
 	public Cart getCart() {
 		return cart;
 	}
