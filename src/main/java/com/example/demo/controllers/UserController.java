@@ -30,7 +30,7 @@ public class UserController {
 	public ResponseEntity<AppUser> findById(@PathVariable Long id) {
 		log.info("Searching for user with Id: " + id);
 		Optional<AppUser> appUser = userRepository.findById(id);
-		if(appUser.get()!=null){
+		if(appUser.isPresent()){
 			log.info("User retrieved with Id: " + id);
 			return ResponseEntity.ok(appUser.get());
 		}else{
