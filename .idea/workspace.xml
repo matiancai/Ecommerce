@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93a6d68a-ba2e-4c1b-a0ab-0fd19719062d" name="Default Changelist" comment="" />
+    <list default="true" id="93a6d68a-ba2e-4c1b-a0ab-0fd19719062d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SareetaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ECommerceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/SareetaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/ECommerceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/SareetaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/SareetaApplicationTests.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +76,22 @@
       <recent name="com.example.demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SareetaApplication">
+  <component name="RunManager" selected="Spring Boot.ECommerceApplication">
+    <configuration name="ECommerceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.ECommerceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ItemControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
@@ -81,21 +102,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.ItemControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SareetaApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auth-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.SareetaApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,20 +154,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SareetaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ECommerceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="auth-course" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.SareetaApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.ECommerceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ECommerceApplicationTests" />
+      <item itemvalue="JUnit.ItemControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.UserControllerTest.testCreateUser" />
+      <item itemvalue="JUnit.UserControllerTest.testGetUserById" />
+      <item itemvalue="Spring Boot.ECommerceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ItemControllerTest" />
         <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.UserControllerTest.testGetUserById" />
         <item itemvalue="JUnit.UserControllerTest.testCreateUser" />
-        <item itemvalue="JUnit.SareetaApplicationTests" />
+        <item itemvalue="JUnit.ECommerceApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +218,9 @@
       <workItem from="1577609426367" duration="605000" />
       <workItem from="1577666710037" duration="16000" />
       <workItem from="1577670162661" duration="113000" />
-      <workItem from="1577672084352" duration="4834000" />
+      <workItem from="1577672084352" duration="5315000" />
+      <workItem from="1577679580617" duration="1361000" />
+      <workItem from="1577682541895" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication fixed.&#10;Some testing added with jUnit.">
       <created>1577347246365</created>
@@ -229,9 +246,10 @@
       <screen x="1920" y="5" width="1600" height="860" />
     </state>
     <state x="2284" y="95" key="#Notifications/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577158028053" />
-    <state x="572" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576984190575">
+    <state x="572" y="195" width="1100" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577682561861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="572" y="195" width="1100" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682561861" />
     <state x="572" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576984190575" />
     <state x="2012" y="97" width="1416" height="676" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1577345991712">
       <screen x="1920" y="5" width="1600" height="860" />
@@ -251,9 +269,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="595" y="313" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1576989037785" />
-    <state x="2026" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577160115054">
-      <screen x="1920" y="5" width="1600" height="860" />
+    <state x="127" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577682348857">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="127" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682348857" />
     <state x="106" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1576996210875" />
     <state x="2026" y="5" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577160115054" />
     <state x="2345" y="27" key="CommitChangelistDialog2" timestamp="1577347245243">
@@ -265,52 +284,52 @@
     </state>
     <state x="579" y="188" key="FileChooserDialogImpl/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001793102" />
     <state x="2499" y="193" key="FileChooserDialogImpl/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577160453122" />
-    <state width="1921" height="340" key="GridCell.Tab.0.bottom" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.0.bottom" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.0.bottom/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.bottom/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="340" key="GridCell.Tab.0.center" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.0.center" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.0.center/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.center/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="340" key="GridCell.Tab.0.left" timestamp="1577676893998">
+    <state width="1921" height="477" key="GridCell.Tab.0.left" timestamp="1577682761075">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893998" />
+    <state width="1921" height="477" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761075" />
     <state width="1557" height="186" key="GridCell.Tab.0.left/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.left/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="340" key="GridCell.Tab.0.right" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.0.right" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.0.right/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.right/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="340" key="GridCell.Tab.1.bottom" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.1.bottom" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.1.bottom/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.bottom/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808033" />
-    <state width="1921" height="340" key="GridCell.Tab.1.center" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.1.center" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.1.center/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.center/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808032" />
-    <state width="1921" height="340" key="GridCell.Tab.1.left" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.1.left" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.1.left/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.left/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808032" />
-    <state width="1921" height="340" key="GridCell.Tab.1.right" timestamp="1577676893999">
+    <state width="1921" height="477" key="GridCell.Tab.1.right" timestamp="1577682761076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="340" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577676893999" />
+    <state width="1921" height="477" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682761076" />
     <state width="1557" height="186" key="GridCell.Tab.1.right/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.right/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808033" />
     <state x="2385" y="133" key="NewModule_or_Project.wizard" timestamp="1577160456106">
@@ -328,10 +347,10 @@
       <screen x="1920" y="5" width="1600" height="860" />
     </state>
     <state x="2312" y="167" key="Vcs.Push.Dialog.v2/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347818025" />
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577666722478">
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577682542875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577666722478" />
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682542875" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577511037310" />
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577002390058" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/1920.5.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1577156717970" />
