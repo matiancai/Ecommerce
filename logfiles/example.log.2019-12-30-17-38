@@ -1,0 +1,4 @@
+2019-12-30 17:38:06,638 [http-nio-8080-exec-1] INFO  (UserController.java:47) - UserNameSearch =  JaneBlogs
+2019-12-30 17:38:06,647 [http-nio-8080-exec-1] INFO  (UserController.java:50) - UserNameFound =  JaneBlogs
+2019-12-30 17:38:21,201 [http-nio-8080-exec-2] INFO  (UserController.java:47) - UserNameSearch =  JakeBlogs
+2019-12-30 17:38:21,206 [http-nio-8080-exec-2] INFO  (UserController.java:50) - UserNameFound =  JakeBlogs

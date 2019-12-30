@@ -1,0 +1,6 @@
+2019-12-30 17:40:07,278 [http-nio-8080-exec-5] INFO  (UserController.java:31) - UserIDSearch = 1
+2019-12-30 17:40:07,296 [http-nio-8080-exec-5] INFO  (UserController.java:34) - UserIdFound =  1
+2019-12-30 17:40:20,437 [http-nio-8080-exec-6] INFO  (UserController.java:31) - UserIDSearch = 2
+2019-12-30 17:40:20,441 [http-nio-8080-exec-6] INFO  (UserController.java:34) - UserIdFound =  2
+2019-12-30 17:40:35,629 [http-nio-8080-exec-7] INFO  (UserController.java:31) - UserIDSearch = 3
+2019-12-30 17:40:35,632 [http-nio-8080-exec-7] INFO  (UserController.java:34) - UserIdFound =  3

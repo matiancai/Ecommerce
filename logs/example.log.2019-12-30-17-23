@@ -1,0 +1,14 @@
+2019-12-30 17:23:11,551 [http-nio-8080-exec-5] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JaneBlogs
+2019-12-30 17:23:11,559 [http-nio-8080-exec-5] INFO  (UserController.java:85) - ApiException = CREATEUSER user = JaneBlogs
+2019-12-30 17:23:15,943 [http-nio-8080-exec-7] INFO  (UserController.java:79) - UserCreation = success UserName =JaneBlogs
+2019-12-30 17:23:30,840 [http-nio-8080-exec-8] INFO  (UserController.java:48) - UserNameSearch =  JaneBlogs
+2019-12-30 17:23:30,979 [http-nio-8080-exec-8] INFO  (UserController.java:51) - UserNameFound =  JaneBlogs
+2019-12-30 17:23:36,878 [http-nio-8080-exec-9] INFO  (UserController.java:48) - UserNameSearch =  JakeBlogs
+2019-12-30 17:23:36,883 [http-nio-8080-exec-9] INFO  (ApiException.java:14) - ApiException = SEARCHUSER user = JakeBlogs
+2019-12-30 17:23:36,883 [http-nio-8080-exec-9] INFO  (UserController.java:58) - ApiException = SEARCHUSER user = JakeBlogs
+2019-12-30 17:23:44,911 [http-nio-8080-exec-10] INFO  (UserController.java:31) - UserIDSearch = 1
+2019-12-30 17:23:44,922 [http-nio-8080-exec-10] INFO  (UserController.java:34) - UserIdFound =  1
+2019-12-30 17:23:48,874 [http-nio-8080-exec-2] INFO  (UserController.java:31) - UserIDSearch = 2
+2019-12-30 17:23:48,877 [http-nio-8080-exec-2] INFO  (UserController.java:34) - UserIdFound =  2
+2019-12-30 17:23:59,314 [http-nio-8080-exec-1] INFO  (UserController.java:31) - UserIDSearch = 1
+2019-12-30 17:23:59,319 [http-nio-8080-exec-1] INFO  (UserController.java:34) - UserIdFound =  1

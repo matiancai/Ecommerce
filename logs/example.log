@@ -1,12 +1,14 @@
-2019-12-30 15:23:08,974 [http-nio-8080-exec-7] INFO  (OrderController.java:35) - OrderSubmit = success username = JaneBlogs
-2019-12-30 15:23:14,053 [http-nio-8080-exec-8] INFO  (OrderController.java:35) - OrderSubmit = success username = JoeBlogs
-2019-12-30 15:23:20,264 [http-nio-8080-exec-9] INFO  (OrderController.java:35) - OrderSubmit = success username = JakeBlogs
-2019-12-30 15:23:26,495 [http-nio-8080-exec-10] INFO  (OrderController.java:30) - OrderSubmit = failure username = JamesBlogs
-2019-12-30 15:23:31,567 [http-nio-8080-exec-2] INFO  (OrderController.java:41) - OrderHistorySearch =JaneBlogs
-2019-12-30 15:23:31,570 [http-nio-8080-exec-2] INFO  (OrderController.java:47) - OrderHistorySearchResult = success username = JaneBlogs
-2019-12-30 15:23:36,453 [http-nio-8080-exec-1] INFO  (OrderController.java:41) - OrderHistorySearch =JoeBlogs
-2019-12-30 15:23:36,456 [http-nio-8080-exec-1] INFO  (OrderController.java:47) - OrderHistorySearchResult = success username = JoeBlogs
-2019-12-30 15:23:45,472 [http-nio-8080-exec-3] INFO  (OrderController.java:41) - OrderHistorySearch =JakeBlogs
-2019-12-30 15:23:45,477 [http-nio-8080-exec-3] INFO  (OrderController.java:47) - OrderHistorySearchResult = success username = JakeBlogs
-2019-12-30 15:23:54,952 [http-nio-8080-exec-4] INFO  (OrderController.java:41) - OrderHistorySearch =JamesBlogs
-2019-12-30 15:23:54,954 [http-nio-8080-exec-4] INFO  (OrderController.java:44) - OrderHistorySearchResult = failure username = JamesBlogs
+2019-12-30 17:24:02,013 [http-nio-8080-exec-3] INFO  (UserController.java:31) - UserIDSearch = 2
+2019-12-30 17:24:02,018 [http-nio-8080-exec-3] INFO  (UserController.java:34) - UserIdFound =  2
+2019-12-30 17:24:03,578 [http-nio-8080-exec-4] INFO  (UserController.java:31) - UserIDSearch = 3
+2019-12-30 17:24:03,581 [http-nio-8080-exec-4] INFO  (ApiException.java:14) - ApiException = SEARCHUSER user = 3
+2019-12-30 17:24:03,581 [http-nio-8080-exec-4] INFO  (UserController.java:40) - ApiException = SEARCHUSER id = 3
+2019-12-30 17:24:19,073 [http-nio-8080-exec-5] INFO  (ApiException.java:14) - ApiException = ADDITEM user = JamesBlogs
+2019-12-30 17:24:19,074 [http-nio-8080-exec-5] INFO  (CartController.java:57) - ApiException = ADDITEM user = JamesBlogs
+2019-12-30 17:24:26,477 [http-nio-8080-exec-6] INFO  (CartController.java:54) - AddItem = success username = JaneBlogs
+2019-12-30 17:24:38,161 [http-nio-8080-exec-7] INFO  (ApiException.java:14) - ApiException = SUBMITORDER user = JamesBlogs
+2019-12-30 17:24:38,162 [http-nio-8080-exec-7] INFO  (OrderController.java:40) - ApiException = SUBMITORDER user = JamesBlogs
+2019-12-30 17:24:43,330 [http-nio-8080-exec-8] INFO  (OrderController.java:36) - OrderSubmit = success username = JaneBlogs
+2019-12-30 17:24:48,626 [http-nio-8080-exec-9] INFO  (ApiException.java:14) - ApiException = ORDERHISTORY user = JamesBlogs
+2019-12-30 17:24:48,626 [http-nio-8080-exec-9] INFO  (OrderController.java:57) - ApiException = ORDERHISTORY user = JamesBlogs
+2019-12-30 17:24:54,090 [http-nio-8080-exec-10] INFO  (OrderController.java:53) - OrderHistorySearchResult = success username = JaneBlogs

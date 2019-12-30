@@ -1,0 +1,3 @@
+2019-12-30 17:41:11,680 [http-nio-8080-exec-8] INFO  (ApiException.java:14) - ApiException = ADDITEM user = JamesBlogs
+2019-12-30 17:41:39,547 [http-nio-8080-exec-9] INFO  (ApiException.java:14) - ApiException = ADDITEM user = JaneBlogs
+2019-12-30 17:41:53,799 [http-nio-8080-exec-10] INFO  (CartController.java:54) - AddItem = success username = JaneBlogs
