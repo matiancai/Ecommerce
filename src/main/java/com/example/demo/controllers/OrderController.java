@@ -25,26 +25,35 @@ public class OrderController {
 
 	@PostMapping("/submit/{userName}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String userName) {
-		AppUser appUser = userRepository.findByUsername(userName);
-		if(appUser == null) {
-			log.info("OrderSubmit = failure username = " + userName);
+		try{
+			AppUser appUser = userRepository.findByUsername(userName);
+			if(appUser == null) {
+                throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
+			}
+
+			UserOrder order = UserOrder.createFromCart(appUser.getCart());
+			orderRepository.save(order);
+			log.info("OrderSubmit = success username = " + userName);
+			return ResponseEntity.ok(order);
+
+		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
-		UserOrder order = UserOrder.createFromCart(appUser.getCart());
-		orderRepository.save(order);
-		log.info("OrderSubmit = success username = " + userName);
-		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{userName}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String userName) {
-		log.info("OrderHistorySearch =" + userName);
-		AppUser appUser = userRepository.findByUsername(userName);
-		if(appUser == null) {
-			log.info("OrderHistorySearchResult = failure username = " + userName);
+		try{
+			AppUser appUser = userRepository.findByUsername(userName);
+			if(appUser == null) {
+				throw new ApiException(ExceptionTypes.ORDERHISTORY, userName);
+			}
+
+			log.info("OrderHistorySearchResult = success username = " + userName);
+			return ResponseEntity.ok(orderRepository.findByAppUser(appUser));
+
+		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
-		log.info("OrderHistorySearchResult = success username = " + userName);
-		return ResponseEntity.ok(orderRepository.findByAppUser(appUser));
 	}
 }

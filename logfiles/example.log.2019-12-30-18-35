@@ -1,0 +1,2 @@
+2019-12-30 18:35:47,665 [http-nio-8080-exec-1] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JasonBlogs
+2019-12-30 18:35:52,632 [http-nio-8080-exec-4] INFO  (UserController.java:77) - UserCreation = success UserName =JasonBlogs

@@ -1,0 +1,4 @@
+2019-12-30 17:43:05,763 [http-nio-8080-exec-3] INFO  (OrderController.java:36) - OrderSubmit = success username = JaneBlogs
+2019-12-30 17:43:22,707 [http-nio-8080-exec-4] INFO  (OrderController.java:52) - OrderHistorySearchResult = success username = JakeBlogs
+2019-12-30 17:43:28,924 [http-nio-8080-exec-5] INFO  (ApiException.java:14) - ApiException = ORDERHISTORY user = JamesBlogs
+2019-12-30 17:43:46,634 [http-nio-8080-exec-6] INFO  (OrderController.java:52) - OrderHistorySearchResult = success username = JaneBlogs

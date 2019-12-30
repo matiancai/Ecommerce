@@ -35,45 +35,50 @@ public class CartController {
 	private ItemRepository itemRepository;
 	
 	@PostMapping("/addToCart")
-	public ResponseEntity<Cart> addTocart(@RequestBody ModifyCartRequest request) {
-		AppUser appUser = userRepository.findByUsername(request.getUsername());
-		if(appUser == null) {
-			log.info("AddItem = failure username = " + request.getUsername());
+	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
+		try{
+			AppUser appUser = userRepository.findByUsername(request.getUsername());
+			if(appUser == null) {
+				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
+			}
+
+			Optional<Item> item = itemRepository.findById(request.getItemId());
+			if(!item.isPresent()) {
+				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
+			}
+
+			Cart cart = appUser.getCart();
+			IntStream.range(0, request.getQuantity())
+					.forEach(i -> cart.addItem(item.get()));
+			cartRepository.save(cart);
+			log.info("AddItem = success username = " + request.getUsername());
+			return ResponseEntity.ok(cart);
+		}catch(ApiException a){
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-
-		Optional<Item> item = itemRepository.findById(request.getItemId());
-		if(!item.isPresent()) {
-			log.info("AddItem = failure username = " + request.getUsername());
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
-
-		Cart cart = appUser.getCart();
-		IntStream.range(0, request.getQuantity())
-			.forEach(i -> cart.addItem(item.get()));
-		cartRepository.save(cart);
-		log.info("AddItem = success username = " + request.getUsername());
-		return ResponseEntity.ok(cart);
 	}
 	
 	@PostMapping("/removeFromCart")
-	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
-		AppUser appUser = userRepository.findByUsername(request.getUsername());
-		if(appUser == null) {
-			log.info("RemoveItem = failure username = " + request.getUsername());
+	public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
+		try{
+			AppUser appUser = userRepository.findByUsername(request.getUsername());
+			if(appUser == null) {
+				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
+			}
+
+			Optional<Item> item = itemRepository.findById(request.getItemId());
+			if(!item.isPresent()) {
+				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
+			}
+			Cart cart = appUser.getCart();
+			IntStream.range(0, request.getQuantity())
+					.forEach(i -> cart.removeItem(item.get()));
+			cartRepository.save(cart);
+			log.info("RemoveItem = success username = " + request.getUsername());
+			return ResponseEntity.ok(cart);
+		}catch(ApiException a){
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 
-		Optional<Item> item = itemRepository.findById(request.getItemId());
-		if(!item.isPresent()) {
-			log.info("RemoveItem = failure username = " + request.getUsername());
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-		}
-		Cart cart = appUser.getCart();
-		IntStream.range(0, request.getQuantity())
-			.forEach(i -> cart.removeItem(item.get()));
-		cartRepository.save(cart);
-		log.info("RemoveItem = success username = " + request.getUsername());
-		return ResponseEntity.ok(cart);
 	}
 }

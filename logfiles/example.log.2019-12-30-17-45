@@ -1,0 +1,2 @@
+2019-12-30 17:45:24,688 [http-nio-8080-exec-9] INFO  (ApiException.java:14) - ApiException = REMOVEITEM user = JoeBlogs
+2019-12-30 17:45:44,783 [http-nio-8080-exec-10] INFO  (CartController.java:77) - RemoveItem = success username = JoeBlogs

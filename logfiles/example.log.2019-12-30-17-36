@@ -1,0 +1,2 @@
+2019-12-30 17:36:47,472 [http-nio-8080-exec-7] INFO  (UserController.java:47) - UserNameSearch =  JakeBlogs
+2019-12-30 17:36:47,569 [http-nio-8080-exec-7] INFO  (ApiException.java:14) - ApiException = SEARCHUSER user = JakeBlogs

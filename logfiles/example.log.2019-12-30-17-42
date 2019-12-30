@@ -1,0 +1,2 @@
+2019-12-30 17:42:28,881 [http-nio-8080-exec-1] INFO  (ApiException.java:14) - ApiException = SUBMITORDER user = JamesBlogs
+2019-12-30 17:42:50,812 [http-nio-8080-exec-2] INFO  (OrderController.java:36) - OrderSubmit = success username = JoeBlogs
