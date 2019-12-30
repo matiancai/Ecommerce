@@ -1,0 +1,16 @@
+2019-12-30 15:22:01,617 [http-nio-8080-exec-7] INFO  (UserController.java:43) - UserNameSearch =  JaneBlogs
+2019-12-30 15:22:01,623 [http-nio-8080-exec-7] INFO  (UserController.java:46) - UserNameFound =  JaneBlogs
+2019-12-30 15:22:06,201 [http-nio-8080-exec-8] INFO  (UserController.java:43) - UserNameSearch =  JakeBlogs
+2019-12-30 15:22:06,205 [http-nio-8080-exec-8] INFO  (UserController.java:46) - UserNameFound =  JakeBlogs
+2019-12-30 15:22:15,318 [http-nio-8080-exec-9] INFO  (UserController.java:30) - UserIDSearch = 1
+2019-12-30 15:22:15,328 [http-nio-8080-exec-9] INFO  (UserController.java:33) - UserIdFound =  1
+2019-12-30 15:22:18,415 [http-nio-8080-exec-10] INFO  (UserController.java:30) - UserIDSearch = 2
+2019-12-30 15:22:18,419 [http-nio-8080-exec-10] INFO  (UserController.java:33) - UserIdFound =  2
+2019-12-30 15:22:21,799 [http-nio-8080-exec-2] INFO  (UserController.java:30) - UserIDSearch = 3
+2019-12-30 15:22:21,804 [http-nio-8080-exec-2] INFO  (UserController.java:33) - UserIdFound =  3
+2019-12-30 15:22:25,624 [http-nio-8080-exec-1] INFO  (UserController.java:30) - UserIDSearch = 4
+2019-12-30 15:22:25,626 [http-nio-8080-exec-1] INFO  (UserController.java:36) - UserIdNotFound =4
+2019-12-30 15:22:31,799 [http-nio-8080-exec-3] INFO  (CartController.java:55) - AddItem = success username = JakeBlogs
+2019-12-30 15:22:40,424 [http-nio-8080-exec-4] INFO  (CartController.java:55) - AddItem = success username = JaneBlogs
+2019-12-30 15:22:53,401 [http-nio-8080-exec-5] INFO  (CartController.java:55) - AddItem = success username = JoeBlogs
+2019-12-30 15:22:59,998 [http-nio-8080-exec-6] INFO  (CartController.java:41) - AddItem = failure username = JamesBlogs
