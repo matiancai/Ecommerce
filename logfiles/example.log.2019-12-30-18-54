@@ -1,0 +1,9 @@
+2019-12-30 18:54:16,984 [http-nio-8080-exec-2] INFO  (UserController.java:77) - UserCreation = success UserName =JasonBlogs
+2019-12-30 18:54:24,500 [http-nio-8080-exec-3] INFO  (UserController.java:77) - UserCreation = success UserName =JoeBlogs
+2019-12-30 18:54:29,357 [http-nio-8080-exec-4] INFO  (UserController.java:77) - UserCreation = success UserName =JaneBlogs
+2019-12-30 18:54:34,210 [http-nio-8080-exec-5] INFO  (UserController.java:77) - UserCreation = success UserName =JakeBlogs
+2019-12-30 18:54:39,788 [http-nio-8080-exec-6] INFO  (UserController.java:77) - UserCreation = success UserName =JamesBlogs
+2019-12-30 18:54:55,106 [http-nio-8080-exec-7] INFO  (UserController.java:47) - UserNameSearch =  JakeBlogs
+2019-12-30 18:54:55,223 [http-nio-8080-exec-7] INFO  (UserController.java:50) - UserNameFound =  JakeBlogs
+2019-12-30 18:54:58,746 [http-nio-8080-exec-8] INFO  (UserController.java:47) - UserNameSearch =  JaneBlogs
+2019-12-30 18:54:58,750 [http-nio-8080-exec-8] INFO  (UserController.java:50) - UserNameFound =  JaneBlogs

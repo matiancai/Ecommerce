@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a6d68a-ba2e-4c1b-a0ab-0fd19719062d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/ApiException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/ExceptionTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/example.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/example.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-course.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +224,7 @@
       <workItem from="1577679580617" duration="1361000" />
       <workItem from="1577682541895" duration="3261000" />
       <workItem from="1577686104429" duration="14127000" />
+      <workItem from="1577751549497" duration="2661000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication fixed.&#10;Some testing added with jUnit.">
       <created>1577347246365</created>
@@ -345,6 +337,10 @@
     <state width="1921" height="238" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577702129457" />
     <state width="1557" height="186" key="GridCell.Tab.1.right/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.right/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808033" />
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1577752136317">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="174" key="Maven.ArtifactSearchDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577752136317" />
     <state x="2385" y="133" key="NewModule_or_Project.wizard" timestamp="1577160456106">
       <screen x="1920" y="5" width="1600" height="860" />
     </state>
@@ -360,10 +356,10 @@
       <screen x="1920" y="5" width="1600" height="860" />
     </state>
     <state x="2312" y="167" key="Vcs.Push.Dialog.v2/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347818025" />
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577682542875">
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577751896059">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682542875" />
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577751896059" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577511037310" />
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577002390058" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/1920.5.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1577156717970" />

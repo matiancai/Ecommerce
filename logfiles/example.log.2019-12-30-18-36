@@ -1,0 +1,2 @@
+2019-12-30 18:36:06,454 [http-nio-8080-exec-5] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JasonBlogs
+2019-12-30 18:36:11,699 [http-nio-8080-exec-7] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JasonBlogs
