@@ -1,2 +1,5 @@
-2019-12-30 18:36:06,454 [http-nio-8080-exec-5] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JasonBlogs
-2019-12-30 18:36:11,699 [http-nio-8080-exec-7] INFO  (ApiException.java:14) - ApiException = CREATEUSER user = JasonBlogs
+2020-01-01 11:41:25,121 [http-nio-8080-exec-10] INFO  (CartController.java:55) - AddItem = success username = JaneBlogs
+2020-01-01 11:41:28,572 [http-nio-8080-exec-2] INFO  (CartController.java:83) - RemoveItem = success username = JaneBlogs
+2020-01-01 11:41:31,784 [http-nio-8080-exec-1] INFO  (OrderController.java:38) - OrderSubmit = success username = JaneBlogs
+2020-01-01 11:41:44,035 [http-nio-8080-exec-3] INFO  (ApiException.java:14) - ApiException = ORDERHISTORY user = JoeBlogs
+2020-01-01 11:41:53,956 [http-nio-8080-exec-4] INFO  (OrderController.java:55) - OrderHistorySearchResult = success username = JaneBlogs

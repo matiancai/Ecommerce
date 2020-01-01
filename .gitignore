@@ -2,3 +2,5 @@
 *.class
 Screenshots*.docx
 UserDetailsServiceImpl.png
+logfiles/*
+exceptionlogs/*

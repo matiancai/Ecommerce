@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.apache.log4j.Logger;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/orders")
@@ -26,16 +27,19 @@ public class OrderController {
 	@PostMapping("/submit/{userName}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String userName) {
 		try{
-			AppUser appUser = userRepository.findByUsername(userName);
-			if(appUser == null) {
+			Optional<AppUser> appUser = userRepository.findByUsername(userName);
+			if(!appUser.isPresent()) {
                 throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
 			}
 
-			UserOrder order = UserOrder.createFromCart(appUser.getCart());
-			orderRepository.save(order);
-			log.info("OrderSubmit = success username = " + userName);
-			return ResponseEntity.ok(order);
-
+			UserOrder order = UserOrder.createFromCart(appUser.get().getCart());
+			if(order != null){
+				orderRepository.save(order);
+				log.info("OrderSubmit = success username = " + userName);
+				return ResponseEntity.ok(order);
+			}else{
+				throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
+			}
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
@@ -44,14 +48,12 @@ public class OrderController {
 	@GetMapping("/history/{userName}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String userName) {
 		try{
-			AppUser appUser = userRepository.findByUsername(userName);
-			if(appUser == null) {
+			Optional<AppUser> appUser = userRepository.findByUsername(userName);
+			if(!appUser.isPresent()) {
 				throw new ApiException(ExceptionTypes.ORDERHISTORY, userName);
 			}
-
 			log.info("OrderHistorySearchResult = success username = " + userName);
-			return ResponseEntity.ok(orderRepository.findByAppUser(appUser));
-
+			return ResponseEntity.ok(orderRepository.findByAppUser(appUser.get()));
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}

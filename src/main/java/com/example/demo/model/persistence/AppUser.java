@@ -63,9 +63,8 @@ public class AppUser {
 	public String toString() {
 		return "AppUser{" +
 				"id=" + id +
-				", username='" + username + '\'' +
-				", password='" + password + '\'' +
-				", cart=" + cart +
-				'}';
+				", username=" + username +
+				", password=" + password +
+				", cart=" + cart + "}";
 	}
 }

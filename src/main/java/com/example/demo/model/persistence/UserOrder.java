@@ -65,10 +65,14 @@ public class UserOrder {
 
 	public static UserOrder createFromCart(Cart cart) {
 		UserOrder order = new UserOrder();
-		order.setItems(cart.getItems().stream().collect(Collectors.toList()));
-		order.setTotal(cart.getTotal());
-		order.setAppUser(cart.getAppUser());
-		return order;
+		if(cart.getItems().size() > 0){
+			order.setItems(cart.getItems().stream().collect(Collectors.toList()));
+			order.setTotal(cart.getTotal());
+			order.setAppUser(cart.getAppUser());
+			return order;
+		}else{
+			return null;
+		}
 	}
 	
 }

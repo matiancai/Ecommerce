@@ -20,7 +20,7 @@ public class Cart {
 	@ManyToMany
 	@JsonProperty
 	@Column
-    private List<Item> items;
+    private List<Item> items = new ArrayList<Item>();
 	
 	@OneToOne(mappedBy = "cart")
 	@JsonProperty
@@ -28,7 +28,7 @@ public class Cart {
 	
 	@Column
 	@JsonProperty
-	private BigDecimal total;
+	private BigDecimal total = new BigDecimal(0);
 	
 	public BigDecimal getTotal() {
 		return total;
@@ -63,24 +63,25 @@ public class Cart {
 	}
 	
 	public void addItem(Item item) {
-		if(items == null) {
-			items = new ArrayList<>();
+		if(item!=null){
+			items.add(item);
+			total = total.add(item.getPrice());
 		}
-		items.add(item);
-		if(total == null) {
-			total = new BigDecimal(0);
-		}
-		total = total.add(item.getPrice());
 	}
 	
 	public void removeItem(Item item) {
-		if(items == null) {
-			items = new ArrayList<>();
+		if(item != null && items.contains(item)){
+			items.remove(item);
+			total = total.subtract(item.getPrice());
 		}
-		items.remove(item);
-		if(total == null) {
-			total = new BigDecimal(0);
-		}
-		total = total.subtract(item.getPrice());
+	}
+
+	@Override
+	public String toString() {
+		return "Cart{" +
+				"id=" + id +
+				", items=" + items +
+				", total=" + total +
+				'}';
 	}
 }

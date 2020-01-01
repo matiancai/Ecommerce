@@ -37,8 +37,8 @@ public class CartController {
 	@PostMapping("/addToCart")
 	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
 		try{
-			AppUser appUser = userRepository.findByUsername(request.getUsername());
-			if(appUser == null) {
+			Optional<AppUser> appUser = userRepository.findByUsername(request.getUsername());
+			if(!appUser.isPresent()) {
 				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
 			}
 
@@ -47,10 +47,11 @@ public class CartController {
 				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
 			}
 
-			Cart cart = appUser.getCart();
+			Cart cart = appUser.get().getCart();
 			IntStream.range(0, request.getQuantity())
 					.forEach(i -> cart.addItem(item.get()));
 			cartRepository.save(cart);
+			System.out.println(cart.toString());
 			log.info("AddItem = success username = " + request.getUsername());
 			return ResponseEntity.ok(cart);
 		}catch(ApiException a){
@@ -61,24 +62,29 @@ public class CartController {
 	@PostMapping("/removeFromCart")
 	public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
 		try{
-			AppUser appUser = userRepository.findByUsername(request.getUsername());
-			if(appUser == null) {
+			Optional<AppUser> appUser = userRepository.findByUsername(request.getUsername());
+			if(!appUser.isPresent()) {
+				System.err.println("User not found");
 				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
 			}
 
 			Optional<Item> item = itemRepository.findById(request.getItemId());
 			if(!item.isPresent()) {
+				System.err.println("Item not found");
 				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
 			}
-			Cart cart = appUser.getCart();
+
+			Cart cart = appUser.get().getCart();
+			System.out.println(cart.toString());
+
 			IntStream.range(0, request.getQuantity())
-					.forEach(i -> cart.removeItem(item.get()));
+						.forEach(i -> cart.removeItem(item.get()));
 			cartRepository.save(cart);
 			log.info("RemoveItem = success username = " + request.getUsername());
 			return ResponseEntity.ok(cart);
+
 		}catch(ApiException a){
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
-
 	}
 }

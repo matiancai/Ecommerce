@@ -29,6 +29,7 @@ public class UserController {
 	public ResponseEntity<AppUser> findById(@PathVariable Long id) {
 		try{
 			log.info("UserIDSearch = " + id);
+			System.out.println("UserIDSearch = " + id);
 			Optional<AppUser> appUser = userRepository.findById(id);
 			if(appUser.isPresent()){
 				log.info("UserIdFound =  " + id);
@@ -37,7 +38,7 @@ public class UserController {
 				throw new ApiException(ExceptionTypes.SEARCHUSER, id.toString());
 			}
 		}catch(ApiException a){
-			return ResponseEntity.notFound().build();
+				return ResponseEntity.notFound().build();
 		}
 	}
 	
@@ -45,14 +46,14 @@ public class UserController {
 	public ResponseEntity<AppUser> findByUserName(@PathVariable String username) {
 		try{
 			log.info("UserNameSearch =  " + username);
-			AppUser appUser = userRepository.findByUsername(username);
-			if(appUser!=null){
+			System.out.println("UserNameSearch =  " + username);
+			Optional<AppUser> appUser = userRepository.findByUsername(username);
+			if(appUser.isPresent()){
 				log.info("UserNameFound =  " + username);
-				return ResponseEntity.ok(appUser);
+				return ResponseEntity.ok(appUser.get());
 			}else{
 				throw new ApiException(ExceptionTypes.SEARCHUSER, username);
 			}
-
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
@@ -77,8 +78,6 @@ public class UserController {
 			log.info("UserCreation = success UserName =" + createUserRequest.getUsername());
 			System.err.println(appUser);
 			return ResponseEntity.ok(appUser);
-
-
 		}catch(ApiException a){
 			return ResponseEntity.badRequest().build();
 		}
