@@ -30,10 +30,10 @@ public class UserController {
 		try{
 			log.info("UserIDSearch = " + id);
 			System.out.println("UserIDSearch = " + id);
-			Optional<AppUser> appUser = userRepository.findById(id);
-			if(appUser.isPresent()){
+			Optional<AppUser> optionalAppUser = userRepository.findById(id);
+			if(optionalAppUser.isPresent()){
 				log.info("UserIdFound =  " + id);
-				return ResponseEntity.ok(appUser.get());
+				return ResponseEntity.ok(optionalAppUser.get());
 			}else{
 				throw new ApiException(ExceptionTypes.SEARCHUSER, id.toString());
 			}

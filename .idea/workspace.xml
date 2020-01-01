@@ -3,36 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="93a6d68a-ba2e-4c1b-a0ab-0fd19719062d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-course.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-course.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screenshots.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Screenshots.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserDetailsServiceImpl.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logfiles/example.log" beforeDir="false" afterPath="$PROJECT_DIR$/logfiles/example.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ECommerceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ECommerceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/UserOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/repositories/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/repositories/ItemRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/model/persistence/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/TestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/TestUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/CartControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/CartControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ItemControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/ItemControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/OrderControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/OrderControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/demo/controllers/UserControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/CartController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/ItemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/AppUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/AppUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/Item.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/UserOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/UserOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/repositories/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/repositories/ItemRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/repositories/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/model/persistence/repositories/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/security/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/security/UserDetailsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/TestUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/demo/TestUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/controllers/ItemControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/demo/controllers/ItemControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/demo/controllers/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/demo/controllers/UserControllerTest.class" afterDir="false" />
     </list>
@@ -40,6 +32,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="125" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -109,7 +104,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ECommerceApplication">
-    <configuration name="ItemControllerTest.testGetItemById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -118,14 +113,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.ItemControllerTest" />
-      <option name="METHOD_NAME" value="testGetItemById" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.CartControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartControllerTest.testRemoveFromCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auth-course" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.CartControllerTest" />
+      <option name="METHOD_NAME" value="testRemoveFromCart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemControllerTest.testGetItemByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderControllerTest.testGetOrdersForUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -134,8 +144,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.ItemControllerTest" />
-      <option name="METHOD_NAME" value="testGetItemByName" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.OrderControllerTest" />
+      <option name="METHOD_NAME" value="testGetOrdersForUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-course" />
       <extension name="coverage">
         <pattern>
@@ -167,24 +177,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
       <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.UserControllerTest" />
-      <option name="METHOD_NAME" value="testCreateUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest.testGetUserByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auth-course" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo.controllers.UserControllerTest" />
-      <option name="METHOD_NAME" value="testGetUserByName" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,20 +191,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserControllerTest.testCreateUser" />
       <item itemvalue="Spring Boot.ECommerceApplication" />
-      <item itemvalue="JUnit.ItemControllerTest.testGetItemByName" />
-      <item itemvalue="JUnit.UserControllerTest.testGetUserByName" />
-      <item itemvalue="JUnit.ItemControllerTest.testGetItemById" />
       <item itemvalue="JUnit.OrderControllerTest.testSubmitOrder" />
+      <item itemvalue="JUnit.CartControllerTest.testRemoveFromCart" />
+      <item itemvalue="JUnit.CartControllerTest" />
+      <item itemvalue="JUnit.OrderControllerTest.testGetOrdersForUser" />
+      <item itemvalue="JUnit.UserControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.testCreateUser" />
         <item itemvalue="JUnit.OrderControllerTest.testSubmitOrder" />
-        <item itemvalue="JUnit.ItemControllerTest.testGetItemById" />
-        <item itemvalue="JUnit.ItemControllerTest.testGetItemByName" />
-        <item itemvalue="JUnit.UserControllerTest.testGetUserByName" />
+        <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.OrderControllerTest.testGetOrdersForUser" />
+        <item itemvalue="JUnit.CartControllerTest" />
+        <item itemvalue="JUnit.CartControllerTest.testRemoveFromCart" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +254,8 @@
       <workItem from="1577772721744" duration="600000" />
       <workItem from="1577839431522" duration="1283000" />
       <workItem from="1577840760006" duration="51000" />
-      <workItem from="1577840882631" duration="8128000" />
+      <workItem from="1577840882631" duration="9843000" />
+      <workItem from="1577866740176" duration="16427000" />
     </task>
     <task id="LOCAL-00001" summary="Authentication fixed.&#10;Some testing added with jUnit.">
       <created>1577347246365</created>
@@ -292,10 +286,10 @@
     </state>
     <state x="572" y="195" width="1100" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577682561861" />
     <state x="572" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576984190575" />
-    <state x="110" y="111" width="1700" height="818" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1577844723471">
+    <state x="110" y="111" width="1700" height="818" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1577877864190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="110" y="111" width="1700" height="818" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577844723471" />
+    <state x="110" y="111" width="1700" height="818" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577877864190" />
     <state x="2012" y="97" width="1416" height="676" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577345991712" />
     <state x="725" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1577849417831">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -331,52 +325,52 @@
     <state x="695" y="227" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577839567904" />
     <state x="579" y="188" key="FileChooserDialogImpl/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001793102" />
     <state x="2499" y="193" key="FileChooserDialogImpl/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577160453122" />
-    <state width="1921" height="274" key="GridCell.Tab.0.bottom" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.0.bottom" timestamp="1577883210916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577883210916" />
     <state width="1557" height="186" key="GridCell.Tab.0.bottom/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.bottom/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="274" key="GridCell.Tab.0.center" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.0.center" timestamp="1577883210915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577883210915" />
     <state width="1557" height="186" key="GridCell.Tab.0.center/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.center/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="274" key="GridCell.Tab.0.left" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.0.left" timestamp="1577883210915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577883210915" />
     <state width="1557" height="186" key="GridCell.Tab.0.left/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.left/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="274" key="GridCell.Tab.0.right" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.0.right" timestamp="1577883210915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577883210915" />
     <state width="1557" height="186" key="GridCell.Tab.0.right/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="279" key="GridCell.Tab.0.right/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347073458" />
-    <state width="1921" height="274" key="GridCell.Tab.1.bottom" timestamp="1577849986809">
+    <state width="1921" height="397" key="GridCell.Tab.1.bottom" timestamp="1577882778081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986809" />
+    <state width="1921" height="397" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577882778081" />
     <state width="1557" height="186" key="GridCell.Tab.1.bottom/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.bottom/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808033" />
-    <state width="1921" height="274" key="GridCell.Tab.1.center" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.1.center" timestamp="1577882778081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577882778081" />
     <state width="1557" height="186" key="GridCell.Tab.1.center/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.center/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808032" />
-    <state width="1921" height="274" key="GridCell.Tab.1.left" timestamp="1577849986808">
+    <state width="1921" height="397" key="GridCell.Tab.1.left" timestamp="1577882778081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986808" />
+    <state width="1921" height="397" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577882778081" />
     <state width="1557" height="186" key="GridCell.Tab.1.left/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.left/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808032" />
-    <state width="1921" height="274" key="GridCell.Tab.1.right" timestamp="1577849986809">
+    <state width="1921" height="397" key="GridCell.Tab.1.right" timestamp="1577882778081">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="274" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577849986809" />
+    <state width="1921" height="397" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577882778081" />
     <state width="1557" height="186" key="GridCell.Tab.1.right/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577001886418" />
     <state width="1557" height="366" key="GridCell.Tab.1.right/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577343808033" />
     <state x="490" y="174" key="Maven.ArtifactSearchDialog" timestamp="1577752136317">
@@ -398,10 +392,10 @@
       <screen x="1920" y="5" width="1600" height="860" />
     </state>
     <state x="2312" y="167" key="Vcs.Push.Dialog.v2/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577347818025" />
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577839442120">
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1577866740413">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577839442120" />
+    <state x="595" y="306" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1577866740413" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577511037310" />
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog/1600.5.1600.860/0.0.1600.860@0.0.1600.860" timestamp="1577002390058" />
     <state x="595" y="306" key="com.intellij.ide.util.TipDialog/1920.5.1600.860/0.0.1920.1040@0.0.1920.1040" timestamp="1577156717970" />
@@ -416,13 +410,16 @@
     <state x="2521" y="226" key="git4idea.merge.GitMergeDialog/1920.5.1600.860/0.0.1920.1040@1920.5.1600.860" timestamp="1577168593657" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/auth_course$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1577843440427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/auth_course$CartControllerTest.ic" NAME="CartControllerTest Coverage Results" MODIFIED="1577879715729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.demo.controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/auth_course$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1577876894494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.demo.controllers.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/auth_course$UserControllerTest_testCreateUser.ic" NAME="UserControllerTest.testCreateUser Coverage Results" MODIFIED="1577346020079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.demo.controllers.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/auth_course$ItemControllerTest.ic" NAME="ItemControllerTest Coverage Results" MODIFIED="1577346928286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/auth_course$ItemControllerTest.ic" NAME="ItemControllerTest Coverage Results" MODIFIED="1577877443147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.demo.controllers.*</FILTER>
     </SUITE>
   </component>

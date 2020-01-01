@@ -25,7 +25,7 @@ public class ItemController {
 		return ResponseEntity.ok(itemRepository.findAll());
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/id/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
 		Optional<Item> item = itemRepository.findById(id);
 		if(!item.isPresent()){

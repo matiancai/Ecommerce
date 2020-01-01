@@ -51,7 +51,7 @@ public class CartController {
 			IntStream.range(0, request.getQuantity())
 					.forEach(i -> cart.addItem(item.get()));
 			cartRepository.save(cart);
-			System.out.println(cart.toString());
+
 			log.info("AddItem = success username = " + request.getUsername());
 			return ResponseEntity.ok(cart);
 		}catch(ApiException a){
@@ -75,7 +75,6 @@ public class CartController {
 			}
 
 			Cart cart = appUser.get().getCart();
-			System.out.println(cart.toString());
 
 			IntStream.range(0, request.getQuantity())
 						.forEach(i -> cart.removeItem(item.get()));

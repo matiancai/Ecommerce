@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -65,14 +66,11 @@ public class UserOrder {
 
 	public static UserOrder createFromCart(Cart cart) {
 		UserOrder order = new UserOrder();
-		if(cart.getItems().size() > 0){
+		if(cart.getItems().size() > 0) {
 			order.setItems(cart.getItems().stream().collect(Collectors.toList()));
 			order.setTotal(cart.getTotal());
 			order.setAppUser(cart.getAppUser());
-			return order;
-		}else{
-			return null;
 		}
+		return order;
 	}
-	
 }

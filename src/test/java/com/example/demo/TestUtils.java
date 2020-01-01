@@ -1,5 +1,10 @@
 package com.example.demo;
 
+import com.example.demo.model.persistence.AppUser;
+import com.example.demo.model.persistence.Cart;
+import com.example.demo.model.persistence.Item;
+import com.example.demo.model.persistence.UserOrder;
+
 import java.lang.reflect.Field;
 
 public class TestUtils {
@@ -25,7 +30,22 @@ public class TestUtils {
         }catch(IllegalAccessException e){
             e.printStackTrace();
         }
+    }
 
+    public static AppUser getAppUser(){
+        return new AppUser();
+    }
+
+    public static Item getItem(){
+        return new Item();
+    }
+
+    public static UserOrder getOrder(){
+        return new UserOrder();
+    }
+
+    public static Cart getCart(){
+        return new Cart();
     }
 
 }

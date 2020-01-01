@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 import java.util.List;
 import java.util.Optional;
 
+import static com.example.demo.model.persistence.UserOrder.createFromCart;
+
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -33,6 +35,7 @@ public class OrderController {
 			}
 
 			UserOrder order = UserOrder.createFromCart(appUser.get().getCart());
+			order.setAppUser(appUser.get()); /*Is this line necessary?*/
 			if(order != null){
 				orderRepository.save(order);
 				log.info("OrderSubmit = success username = " + userName);
@@ -40,6 +43,7 @@ public class OrderController {
 			}else{
 				throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
 			}
+
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
