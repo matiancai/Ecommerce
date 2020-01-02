@@ -22,26 +22,47 @@ public class ItemController {
 	
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {
-		return ResponseEntity.ok(itemRepository.findAll());
+		try{
+			List<Item> itemList = itemRepository.findAll();
+			if(itemList==null){
+				throw new ApiException(ExceptionTypes.SEARCHITEM, "All Items");
+			}else{
+				return ResponseEntity.ok(itemList);
+			}
+		}catch(ApiException e){
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@GetMapping("/id/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
-		Optional<Item> item = itemRepository.findById(id);
-		if(!item.isPresent()){
+		try{
+			Optional<Item> item = itemRepository.findById(id);
+			if(item==null){
+				throw new ApiException(ExceptionTypes.SEARCHITEM, id.toString());
+			}else if(!item.isPresent()){
+				throw new ApiException(ExceptionTypes.SEARCHITEM, id.toString());
+			}else{
+				return ResponseEntity.of(item);
+			}
+		}catch(ApiException e){
 			return ResponseEntity.notFound().build();
-		}else{
-			return ResponseEntity.of(item);
 		}
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<Item> getItemByName(@PathVariable String name) {
-		Optional<Item> item = itemRepository.findByName(name);
-		if(!item.isPresent()){
+		try{
+			Optional<Item> item = itemRepository.findByName(name);
+			if(item == null){
+				throw new ApiException(ExceptionTypes.SEARCHITEM, name);
+			}else if(!item.isPresent()){
+				throw new ApiException(ExceptionTypes.SEARCHITEM, name);
+			}else{
+				return ResponseEntity.of(item);
+			}
+		}catch(ApiException e){
 			return ResponseEntity.notFound().build();
-		}else{
-			return ResponseEntity.of(item);
 		}
 	}
 }

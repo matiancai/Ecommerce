@@ -25,17 +25,20 @@ public class UserController {
 
 	@Autowired private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+
 	@GetMapping("/id/{id}")
 	public ResponseEntity<AppUser> findById(@PathVariable Long id) {
 		try{
 			log.info("UserIDSearch = " + id);
 			System.out.println("UserIDSearch = " + id);
 			Optional<AppUser> optionalAppUser = userRepository.findById(id);
-			if(optionalAppUser.isPresent()){
+			if (optionalAppUser == null){
+				throw new ApiException(ExceptionTypes.SEARCHUSER, id.toString());
+			}else if(!optionalAppUser.isPresent()){
+				throw new ApiException(ExceptionTypes.SEARCHUSER, id.toString());
+			}else{
 				log.info("UserIdFound =  " + id);
 				return ResponseEntity.ok(optionalAppUser.get());
-			}else{
-				throw new ApiException(ExceptionTypes.SEARCHUSER, id.toString());
 			}
 		}catch(ApiException a){
 				return ResponseEntity.notFound().build();
@@ -48,11 +51,13 @@ public class UserController {
 			log.info("UserNameSearch =  " + username);
 			System.out.println("UserNameSearch =  " + username);
 			Optional<AppUser> appUser = userRepository.findByUsername(username);
-			if(appUser.isPresent()){
+			if(appUser == null){
+				throw new ApiException(ExceptionTypes.SEARCHUSER, username);
+			}else if(!appUser.isPresent()){
+				throw new ApiException(ExceptionTypes.SEARCHUSER, username);
+			}else{
 				log.info("UserNameFound =  " + username);
 				return ResponseEntity.ok(appUser.get());
-			}else{
-				throw new ApiException(ExceptionTypes.SEARCHUSER, username);
 			}
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
@@ -62,22 +67,27 @@ public class UserController {
 	@PostMapping("/create")
 	public ResponseEntity<AppUser> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		try{
-			AppUser appUser = new AppUser();
-			appUser.setUsername(createUserRequest.getUsername());
-			Cart cart = new Cart();
-			cartRepository.save(cart);
-			appUser.setCart(cart);
+			AppUser newUser = new AppUser();
+			newUser.setUsername(createUserRequest.getUsername());
 
-			if(createUserRequest.getPassword().length() < 7 ||
-					!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+			if(createUserRequest==null){
+				throw new ApiException(ExceptionTypes.CREATEUSER, null);
+			}else if(newUser.getUsername() == null){
 				throw new ApiException(ExceptionTypes.CREATEUSER, createUserRequest.getUsername());
-			}
+			}else if(createUserRequest.getPassword().length() < 7){
+				throw new ApiException(ExceptionTypes.CREATEUSER, createUserRequest.getUsername());
+			}else if(!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+				throw new ApiException(ExceptionTypes.CREATEUSER, createUserRequest.getUsername());
+			}else{
+				Cart cart = new Cart();
+				cartRepository.save(cart);
+				newUser.setCart(cart);
 
-			appUser.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
-			userRepository.save(appUser);
-			log.info("UserCreation = success UserName =" + createUserRequest.getUsername());
-			System.err.println(appUser);
-			return ResponseEntity.ok(appUser);
+				newUser.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+				userRepository.save(newUser);
+				log.info("UserCreation = success UserName =" + createUserRequest.getUsername());
+				return ResponseEntity.ok(newUser);
+			}
 		}catch(ApiException a){
 			return ResponseEntity.badRequest().build();
 		}

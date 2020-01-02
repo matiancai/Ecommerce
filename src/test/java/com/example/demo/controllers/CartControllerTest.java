@@ -27,6 +27,8 @@ public class CartControllerTest {
     private CartRepository cartRepository = mock(CartRepository.class);
     private ItemRepository itemRepository = mock(ItemRepository.class);
     private ModifyCartRequest modifyCartRequest =mock(ModifyCartRequest.class);
+    private Optional<AppUser> optionalAppUser;
+    private Optional<Item> optionalItem;
 
     @Before
     public void initTest(){
@@ -34,25 +36,59 @@ public class CartControllerTest {
         TestUtils.injectObjects(cartController, "userRepository", userRepository);
         TestUtils.injectObjects(cartController, "cartRepository", cartRepository);
         TestUtils.injectObjects(cartController, "itemRepository", itemRepository);
-        Optional<AppUser> optionalAppUser= Optional.of(TestUtils.getAppUser());
-        Optional<Item> optionalItem= Optional.of(TestUtils.getItem());
-        when(userRepository.findById(any())).thenReturn(optionalAppUser);
-        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
-        when(itemRepository.findById(any())).thenReturn(optionalItem);
-        when(itemRepository.findByName(any())).thenReturn(optionalItem);
+        optionalAppUser = Optional.of(TestUtils.getAppUser());
+        optionalItem = Optional.of(TestUtils.getItem());
     }
 
     @Test
-    public void testAddToCart() throws Exception{
+    public void testAddToCartSuccess() throws Exception{
+        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
+        when(itemRepository.findById(any())).thenReturn(optionalItem);
         ResponseEntity<Cart> response = cartController.addToCart(modifyCartRequest);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
-    public void testRemoveFromCart() throws Exception{
+    public void testAddToCartFailure() throws Exception{
+        when(userRepository.findByUsername(any())).thenReturn(null);//Test user not found
+        when(itemRepository.findById(any())).thenReturn(optionalItem);
+
+        ResponseEntity<Cart> response = cartController.addToCart(modifyCartRequest);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+
+        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
+        when(itemRepository.findById(any())).thenReturn(null);//Test item not found
+        ResponseEntity<Cart> response2 = cartController.addToCart(modifyCartRequest);
+        assertNotNull(response2);
+        assertEquals(404, response2.getStatusCodeValue());
+    }
+
+    @Test
+    public void testRemoveFromCartSuccess() throws Exception{
+        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
+        when(itemRepository.findById(any())).thenReturn(optionalItem);
         ResponseEntity<Cart> response = cartController.removeFromCart(modifyCartRequest);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testRemoveFromCartFailure() throws Exception{
+
+        when(userRepository.findByUsername(any())).thenReturn(null); //Test user not found
+        when(itemRepository.findById(any())).thenReturn(optionalItem);
+
+        ResponseEntity<Cart> response = cartController.removeFromCart(modifyCartRequest);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+
+        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
+        when(itemRepository.findById(any())).thenReturn(null);//Test item not found
+
+        ResponseEntity<Cart> response2 = cartController.removeFromCart(modifyCartRequest);
+        assertNotNull(response2);
+        assertEquals(404, response2.getStatusCodeValue());
     }
 }

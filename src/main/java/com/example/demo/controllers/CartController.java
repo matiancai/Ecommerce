@@ -38,12 +38,16 @@ public class CartController {
 	public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
 		try{
 			Optional<AppUser> appUser = userRepository.findByUsername(request.getUsername());
-			if(!appUser.isPresent()) {
+			if(appUser==null){
+				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
+			}else if(!appUser.isPresent()) {
 				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
 			}
 
 			Optional<Item> item = itemRepository.findById(request.getItemId());
-			if(!item.isPresent()) {
+			if(item==null){
+				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
+			}else if(!item.isPresent()) {
 				throw new ApiException(ExceptionTypes.ADDITEM, request.getUsername());
 			}
 
@@ -63,19 +67,22 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromCart(@RequestBody ModifyCartRequest request) {
 		try{
 			Optional<AppUser> appUser = userRepository.findByUsername(request.getUsername());
-			if(!appUser.isPresent()) {
-				System.err.println("User not found");
+
+			if(appUser==null){
+				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
+			}else if(!appUser.isPresent()) {
 				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
 			}
 
 			Optional<Item> item = itemRepository.findById(request.getItemId());
-			if(!item.isPresent()) {
-				System.err.println("Item not found");
+
+			if(item==null){
+				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
+			}else if(!item.isPresent()) {
 				throw new ApiException(ExceptionTypes.REMOVEITEM, request.getUsername());
 			}
 
 			Cart cart = appUser.get().getCart();
-
 			IntStream.range(0, request.getQuantity())
 						.forEach(i -> cart.removeItem(item.get()));
 			cartRepository.save(cart);

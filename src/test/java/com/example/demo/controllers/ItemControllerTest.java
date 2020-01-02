@@ -23,35 +23,62 @@ public class ItemControllerTest {
 
     private ItemRepository itemRepository = mock(ItemRepository.class);
 
+    private Optional<Item> optionalItem;
+    private List<Item> itemList;
+
     @Before
     public void initTest(){
         itemController = new ItemController();
         TestUtils.injectObjects(itemController, "itemRepository", itemRepository);
-        Optional<Item> optionalItem= Optional.of(TestUtils.getItem());
-        List<Item> itemList = new ArrayList<Item>(){};
-        when(itemRepository.findById(any())).thenReturn(optionalItem);
-        when(itemRepository.findByName(any())).thenReturn(optionalItem);
-        when(itemRepository.findAll()).thenReturn(itemList);
+        optionalItem= Optional.of(TestUtils.getItem());
+        itemList = new ArrayList<Item>(){};
     }
 
     @Test
-    public void testGetItemById() throws Exception{
+    public void testGetItemByIdSuccess() throws Exception{
+        when(itemRepository.findById(any())).thenReturn(optionalItem);
         ResponseEntity<Item> response = itemController.getItemById(1L);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
-    public void testGetItemByName() throws Exception{
+    public void testGetItemByIdFailure() throws Exception{
+        when(itemRepository.findById(any())).thenReturn(null);
+        ResponseEntity<Item> response = itemController.getItemById(1L);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testGetItemByNameSuccess() throws Exception{
+        when(itemRepository.findByName(any())).thenReturn(optionalItem);
         ResponseEntity<Item> response = itemController.getItemByName("name");
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
-    public void testFindAll() throws Exception{
+    public void testGetItemByNameFailure() throws Exception{
+        when(itemRepository.findByName(any())).thenReturn(null);
+        ResponseEntity<Item> response = itemController.getItemByName("name");
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testFindAllSuccess() throws Exception{
+        when(itemRepository.findAll()).thenReturn(itemList);
         ResponseEntity<List<Item>> response = itemController.getItems();
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testFindAllFailure() throws Exception{
+        when(itemRepository.findAll()).thenReturn(null);
+        ResponseEntity<List<Item>> response = itemController.getItems();
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
     }
 }

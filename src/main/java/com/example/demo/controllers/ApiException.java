@@ -11,7 +11,7 @@ public class ApiException extends RuntimeException {
     public ApiException(ExceptionTypes exceptionType, String message){
         super(message);
         this.exceptionType = exceptionType;
-        log.info("ApiException = " + this.getExceptionType() + " user = " + message);
+        log.error("ApiException = " + this.getExceptionType() + " user = " + message);
     }
 
     public ExceptionTypes getExceptionType() {

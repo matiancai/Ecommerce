@@ -21,38 +21,57 @@ public class UserControllerTest {
     private UserRepository userRepository = mock(UserRepository.class);
     private CartRepository cartRepository = mock(CartRepository.class);
     private BCryptPasswordEncoder bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
+    private AppUser appUser = mock(AppUser.class);
+    private Optional<AppUser> optionalAppUser;
+
 
     @Before
     public void initTest(){
         userController = new UserController();
+        optionalAppUser= Optional.of(TestUtils.getAppUser());
         TestUtils.injectObjects(userController, "userRepository", userRepository);
         TestUtils.injectObjects(userController, "cartRepository", cartRepository);
         TestUtils.injectObjects(userController, "bCryptPasswordEncoder", bCryptPasswordEncoder);
-        Optional<AppUser> optionalAppUser= Optional.of(TestUtils.getAppUser());
-        when(userRepository.findById(any())).thenReturn(optionalAppUser);
-        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
-        when(bCryptPasswordEncoder.encode("testPassword")).thenReturn("hashedPassword");
     }
 
     @Test
-    public void testFindUserById(){
+    public void testFindUserByIdSuccess(){
+        when(userRepository.findById(any())).thenReturn(optionalAppUser);
         ResponseEntity<AppUser> response = userController.findById(0L);
-        System.out.println(response);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
-    public void testFindUserByUsername(){
+    public void testFindUserByIdFailure(){
+        when(userRepository.findById(any())).thenReturn(null);
+        ResponseEntity<AppUser> response = userController.findById(0L);
+        System.out.println(response);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void testFindUserByUsernameSuccess(){
+        when(userRepository.findByUsername(any())).thenReturn(optionalAppUser);
         ResponseEntity<AppUser> response = userController.findByUserName("testUser");
         System.out.println(response);
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
     }
 
+    @Test
+    public void testFindUserByUsernameFailure(){
+        when(userRepository.findByUsername(any())).thenReturn(null);
+        ResponseEntity<AppUser> response = userController.findByUserName("testUser");
+        System.out.println(response);
+        assertNotNull(response);
+        assertEquals(404, response.getStatusCodeValue());
+    }
 
     @Test
-    public void testCreateUser() throws Exception{
+    public void testCreateUserSuccess() throws Exception{
+        when(bCryptPasswordEncoder.encode("testPassword")).thenReturn("hashedPassword");
 
         CreateUserRequest createUserRequest = new CreateUserRequest();
         createUserRequest.setUsername("testUser");
@@ -71,5 +90,29 @@ public class UserControllerTest {
         assertEquals("hashedPassword", createdUser.getPassword());
     }
 
+    @Test
+    public void testCreateUserFailure() throws Exception{
 
+        when(bCryptPasswordEncoder.encode("testPassword")).thenReturn("hashedPassword");
+
+        CreateUserRequest createUserRequest = new CreateUserRequest();
+        createUserRequest.setUsername(null);
+        createUserRequest.setPassword("testPassword");
+        createUserRequest.setConfirmPassword("testPassword");
+
+        ResponseEntity<AppUser> response = userController.createUser(createUserRequest);
+
+        assertNotNull(response);
+        assertEquals(400, response.getStatusCodeValue());
+
+        CreateUserRequest createUserRequest2 = new CreateUserRequest();
+        createUserRequest2.setUsername("testUser");
+        createUserRequest2.setPassword("testPassword");
+        createUserRequest2.setConfirmPassword("testPass");
+
+        ResponseEntity<AppUser> response2 = userController.createUser(createUserRequest2);
+
+        assertNotNull(response2);
+        assertEquals(400, response2.getStatusCodeValue());
+    }
 }

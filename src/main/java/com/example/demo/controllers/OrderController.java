@@ -26,20 +26,25 @@ public class OrderController {
 	@Autowired
 	private OrderRepository orderRepository;
 
+	@Autowired private UserOrder userOrder;
+
 	@PostMapping("/submit/{userName}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String userName) {
 		try{
 			Optional<AppUser> appUser = userRepository.findByUsername(userName);
-			if(!appUser.isPresent()) {
+			if(appUser ==null) {
+				throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
+			}else if(!appUser.isPresent()) {
                 throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
 			}
 
-			UserOrder order = UserOrder.createFromCart(appUser.get().getCart());
-			order.setAppUser(appUser.get()); /*Is this line necessary?*/
-			if(order != null){
-				orderRepository.save(order);
+			userOrder = UserOrder.createFromCart(appUser.get().getCart());
+			//order.setAppUser(appUser.get()); /*Is this line necessary?*/
+
+			if(userOrder != null){
+				orderRepository.save(userOrder);
 				log.info("OrderSubmit = success username = " + userName);
-				return ResponseEntity.ok(order);
+				return ResponseEntity.ok(userOrder);
 			}else{
 				throw new ApiException(ExceptionTypes.SUBMITORDER, userName);
 			}
@@ -53,11 +58,19 @@ public class OrderController {
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String userName) {
 		try{
 			Optional<AppUser> appUser = userRepository.findByUsername(userName);
+			if(appUser == null){
+				throw new ApiException(ExceptionTypes.ORDERHISTORY, userName);
+			}
 			if(!appUser.isPresent()) {
 				throw new ApiException(ExceptionTypes.ORDERHISTORY, userName);
 			}
-			log.info("OrderHistorySearchResult = success username = " + userName);
-			return ResponseEntity.ok(orderRepository.findByAppUser(appUser.get()));
+			List<UserOrder> orderList = orderRepository.findByAppUser(appUser.get());
+			if(orderList != null){
+				log.info("OrderHistorySearchResult = success username = " + userName);
+			}else{
+				throw new ApiException(ExceptionTypes.ORDERHISTORY, userName);
+			}
+			return ResponseEntity.ok(orderList);
 		}catch(ApiException a){
 			return ResponseEntity.notFound().build();
 		}
